@@ -1,0 +1,21 @@
+services:
+  frontend:
+    container_name: trader-sim-frontend
+    image: node:20-bullseye
+    volumes:
+      - ./app:/app
+      - ./.env.development:/app/.env.development
+    ports:
+      - 3000:3000
+    working_dir: /app
+    command: bash -c "npm i && npm run dev"
+  database:
+    container_name: trader-sim-db
+    image: postgres
+    env_file:
+      - ".env.development"
+    volumes:
+      # - blog-db-data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5432:5432
