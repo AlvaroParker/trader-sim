@@ -1,13 +1,7 @@
 import { getSession } from "@auth0/nextjs-auth0";
 import Sidebar from "./components/Sidebar";
+import { Session } from "@/common";
 
-interface Session {
-  user: {
-    email: string;
-    name: string;
-    picture: string;
-  }
-}
 
 export default async function Home() {
   const session = await getSession() as Session;
@@ -15,9 +9,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-none md:flex-row flex-col h-screen">
-      <div className="z-50 md:w-64">
-        <Sidebar email={email} name={name} picture={picture} />
-      </div>
+      <Sidebar email={email} name={name!} picture={picture!} default_path="/" />
       <div className="flex-grow px-8 pt-12 bg-gray-100">
 
         <a href="/api/auth/logout" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
