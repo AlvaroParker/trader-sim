@@ -7,8 +7,8 @@ export default function LoginForm() {
 
   return (
     <>
-      <div className="w-full h-screen flex items-center justify-center bg-gray-900">
-        <div className="bg-gray-200 w-96 h-auto rounded-lg pt-8 pb-8 px-8 flex flex-col items-center">
+      <div className="w-full h-screen flex items-center justify-center">
+        <div className="bg-gray-900 w-96 h-auto rounded-lg pt-8 pb-8 px-8 flex flex-col items-center text-gray-100">
           <label className="font-light text-4xl mb-4">Trader<span className="font-bold italic">sim</span></label>
           <p className="text-center mb-4">
             Plataforma para simulación de trading en tiempo real.

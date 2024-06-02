@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <UserProvider>
-        <body className={inter.className}>{children}</body>
+        <body className={`bg-gray-800 ${inter.className}`}>{children}</body>
       </UserProvider>
-    </html>
+    </html >
   );
 }

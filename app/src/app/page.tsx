@@ -10,9 +10,9 @@ export default async function Home() {
   return (
     <div className="flex flex-none md:flex-row flex-col h-screen">
       <Sidebar email={email} name={name!} picture={picture!} default_path="/" />
-      <div className="flex-grow px-8 pt-12 bg-gray-100">
+      <div className="flex-grow px-8 pt-12 text-gray-100">
 
-        <a href="/api/auth/logout" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <a href="/api/auth/logout" className="bg-blue-500 hover:bg-blue-700 text-gray-100 font-bold py-2 px-4 rounded">
           Click here to logout!
         </a>
         <h1>
