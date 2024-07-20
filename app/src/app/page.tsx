@@ -5,7 +5,10 @@ import { Session } from "@/common";
 
 export default async function Home() {
   const session = await getSession() as Session;
+  console.log(session)
   const { user: { email, name, picture } } = session;
+
+
 
   return (
     <div className="flex flex-none md:flex-row flex-col h-screen">

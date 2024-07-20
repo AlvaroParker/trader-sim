@@ -5,3 +5,10 @@ export interface Session {
     picture?: string;
   }
 }
+
+export interface Stock {
+  Close: number;
+  High: number;
+  Low: number;
+  Timestamp: Date;
+}

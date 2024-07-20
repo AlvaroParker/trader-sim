@@ -6,5 +6,5 @@ export const GET = handleAuth({
             connection: 'google-oauth2',
             scope: "openid profile email offline_access", // or AUTH0_SCOPE
         }
-    })
+    }),
 });
